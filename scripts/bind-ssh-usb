@@ -1,0 +1,4 @@
+#!/bin/sh 
+
+bindfs -n -r -p 0700 -o nonempty \
+		/media/ubuntu/ssh-keys ~/.ssh
