@@ -1,0 +1,7 @@
+
+# custom environment
+DOTFILES=${HOME}/dotfiles
+. ${DOTFILES}/bash/env
+
+alias ll="ls -lG"
+alias vi=vim

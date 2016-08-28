@@ -1,8 +1,0 @@
-DOTFILES=${HOME}/dotfiles
-
-# .profile is ignored due to this file
-# so need to replicate it
-. ${DOTFILES}/bash/profile
-
-# custom environment
-. ${DOTFILES}/bash/env
