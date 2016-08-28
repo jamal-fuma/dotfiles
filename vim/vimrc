@@ -19,21 +19,30 @@ let leader = '\\'
 " Terminal Encoding
 set t_Co=16
 
-"automated install
+"-----------------------------------------------------
+" START automated install of vundle
+"-----------------------------------------------------
+let vundle_plugin_trigger=expand('~/.vim/bundle/vundle-managed/installed.txt')
+let vundle_plugins_installed = 1
+if !filereadable(vundle_plugin_trigger)
+    silent !mkdir -p ~/.vim/bundle/vundle-managed
+    let vundle_plugins_installed = 0
+endif
+
 "-----------------------------------------------------
 " START plugin section
 "-----------------------------------------------------
 filetype off " force reloading *after* pathogen loaded
 set rtp+=~/dotfiles/bundle/vundle
-call vundle#begin()
-
-let vundle_readme=expand('~/.vim/bundle/.plugins-installed')
-if !filereadable(vundle_readme)
-    :PluginInstall
-    silent !touch ~/.vim/bundle/.plugins-installed
-endif
+call vundle#begin('~/.vim/bundle/vundle-managed')
 
 Plugin 'VundleVim/Vundle.vim'
+
+" trigger automated install of plugins
+if vundle_plugins_installed == 0
+    :PluginInstall
+    silent !touch ~/.vim/bundle/vundle-managed/installed.txt
+endif
 
 call vundle#end()
 "-----------------------------------------------------
