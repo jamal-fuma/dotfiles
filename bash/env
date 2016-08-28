@@ -1,0 +1,5 @@
+export TERM=linux
+export PS1='\u@\h \w:# '
+export VISUAL=vim
+export EDITOR=vim
+export PAGER=less
