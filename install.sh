@@ -24,8 +24,9 @@ symlink_files()
 	do
 		ln -sv ${from} ${to}
 	done <<EOS
-${PROJECT_ROOT}/vim/vimrc	${HOME}/.vimrc
-${PROJECT_ROOT}/git/gitconfig	${HOME}/.gitconfig
+${PROJECT_ROOT}/bash/bash_profile	${HOME}/.bash_profile
+${PROJECT_ROOT}/vim/vimrc	        ${HOME}/.vimrc
+${PROJECT_ROOT}/git/gitconfig	    ${HOME}/.gitconfig
 EOS
 }
 

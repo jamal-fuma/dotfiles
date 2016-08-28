@@ -1,0 +1,12 @@
+# If not running interactively, don't do anything
+# unexpect output can break ssh sessions
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+
+DOTFILE=${HOME}/dotfiles
+
+# custom environment
+. ${DOTFILES}/bash/env
