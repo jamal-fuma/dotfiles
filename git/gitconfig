@@ -4,3 +4,6 @@ email = Jamal.Natour@fumasoftware.com
 
 [alias]
 ll = log --abbrev-commit --graph --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(white)  %Creset %aN'
+
+[push]
+default = simple
