@@ -11,7 +11,7 @@ set ts=4
 set swapfile
 
 " cluttered ~files are not
-set dir=~/tmp
+set dir=/tmp
 
 " Leader
 let leader = '\\'
