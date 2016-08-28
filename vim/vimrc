@@ -1,0 +1,14 @@
+" sod vi we want full fat vim
+set nocompatible
+
+" Basic Settings
+set nu
+set expandtab
+set sw=4
+set ts=4
+
+" Leader
+let leader = '\\'
+
+" Terminal Encoding
+set t_Co=16
