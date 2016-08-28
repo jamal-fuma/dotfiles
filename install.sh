@@ -32,6 +32,7 @@ EOS
 
 case $1 in
 *)
+    cd ${PROJECT_ROOT} && git submodule update --init
 	symlink_files
 ;;
 esac
