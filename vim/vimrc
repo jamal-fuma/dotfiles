@@ -37,6 +37,7 @@ set rtp+=~/dotfiles/bundle/vundle
 call vundle#begin('~/.vim/bundle/vundle-managed')
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
 
 " trigger automated install of plugins
 if vundle_plugins_installed == 0
