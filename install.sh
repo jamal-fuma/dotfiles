@@ -30,9 +30,15 @@ ${PROJECT_ROOT}/git/gitconfig	    ${HOME}/.gitconfig
 EOS
 }
 
+install_vim_plugins()
+{
+    vim -E -s -c "source ~/.vimrc" -c PluginInstall -c qa
+}
+
 case $1 in
 *)
     cd ${PROJECT_ROOT} && git submodule update --init
 	symlink_files
+    install_vim_plugins
 ;;
 esac
