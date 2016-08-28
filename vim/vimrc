@@ -7,8 +7,40 @@ set expandtab
 set sw=4
 set ts=4
 
+" swapfiles are useful
+set swapfile
+
+" cluttered ~files are not
+set dir=~/tmp
+
 " Leader
 let leader = '\\'
 
 " Terminal Encoding
 set t_Co=16
+
+"automated install
+"-----------------------------------------------------
+" START plugin section
+"-----------------------------------------------------
+filetype off " force reloading *after* pathogen loaded
+set rtp+=~/dotfiles/bundle/vundle
+call vundle#begin()
+
+let vundle_readme=expand('~/.vim/bundle/.plugins-installed')
+if !filereadable(vundle_readme)
+    :PluginInstall
+    silent !touch ~/.vim/bundle/.plugins-installed
+endif
+
+Plugin 'VundleVim/Vundle.vim'
+
+call vundle#end()
+"-----------------------------------------------------
+" STOP plugin section
+"-----------------------------------------------------
+
+"must be last
+filetype plugin indent on " load filetype plugins/indent settings
+colorscheme solarized
+syntax on                      " enable syntax
