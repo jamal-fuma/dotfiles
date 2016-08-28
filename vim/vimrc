@@ -38,6 +38,7 @@ call vundle#begin('~/.vim/bundle/vundle-managed')
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive.git'
 
 " trigger automated install of plugins
 if vundle_plugins_installed == 0
