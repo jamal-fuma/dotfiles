@@ -1,12 +1,8 @@
-# If not running interactively, don't do anything
-# unexpect output can break ssh sessions
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+DOTFILES=${HOME}/dotfiles
 
-
-DOTFILE=${HOME}/dotfiles
+# .profile is ignored due to this file
+# so need to replicate it
+. ${DOTFILES}/bash/profile
 
 # custom environment
 . ${DOTFILES}/bash/env
