@@ -1,0 +1,11 @@
+text/rtf; open %s; copiousoutput; nametemplate=%s.rtf
+application/ms-rtf; open %s; copiousoutput; nametemplate=%s.rtf
+text/html; elinks -dump -dump-charset utf8 -force-html %s; copiousoutput; needsterminal; nametemplate=%s.html
+
+text/calendar; ~/bin/icalview %s; copiousoutput; nametemplate=%s.ics
+application/pdf; open %s; copiousoutput; nametemplate=%s.pdf
+image/jpg; open %s; copiousoutput; nametemplate=%s.jpg
+image/png; open %s; copiousoutput; nametemplate=%s.png
+application/vnd.oasis.opendocument.text; open %s; copiousoutput; nametemplate=%s.odt
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; open %s; copiousoutput; nametemplate=%s.docx
+application/msword; open %s; copiousoutput; nametemplate=%s.doc
