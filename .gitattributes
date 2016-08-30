@@ -1,3 +1,4 @@
+mutt/signature*.txt filter=openssl diff=openssl
 mutt/contacts/*.rc filter=openssl diff=openssl
 [merge]
 	renormalize=true
