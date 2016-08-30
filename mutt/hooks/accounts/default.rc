@@ -1,0 +1,8 @@
+# unset everything set in an account hook
+
+unset realname
+unset my_username
+unset signature
+unset imap_user
+unset smtp_url
+unset smtp_pass
