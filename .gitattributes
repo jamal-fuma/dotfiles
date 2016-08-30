@@ -1,0 +1,3 @@
+mutt/contacts/*.rc filter=openssl diff=openssl
+[merge]
+	renormalize=true
