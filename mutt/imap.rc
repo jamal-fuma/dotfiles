@@ -1,0 +1,26 @@
+# IMAP protocol basics
+set imap_check_subscribed=yes
+set imap_keepalive = 300 # was 150
+set mail_check = 120 # was 300       # Mail polling interval
+set timeout=300         # Notify me of new mail in my mailbox this often
+
+# IMAP protocol mandatory encryption
+set ssl_starttls="yes"   # negotiate an encrypted connection
+set ssl_force_tls="yes"  # always require encryption
+
+# Archive outgoing mail
+set copy=yes            # Delivery a copy of outgoing mail to $record
+
+# Reply options
+set include             # quote msg when replying
+set reply_to            # use address from reply-to header when replying
+set fast_reply          # do not ask for to, subject, etc when replying
+
+# Mailbox listings are threaded
+set sort 		= 'threads'    # order messages by thread
+set sort_aux 		= 'last-date-received'
+
+# Maintain a local cache for messages and ssl certificates
+set header_cache 	= ~/.mutt-cache/headers
+set message_cachedir 	= ~/.mutt-cache/bodies
+set certificate_file 	= ~/.mutt-cache/certificates
