@@ -31,6 +31,11 @@ ${PROJECT_ROOT}/mutt/muttrc	        ${HOME}/.muttrc
 EOS
 }
 
+make_mutt_cache_dirs()
+{
+    mkdir -p ~/.mutt-cache/{bodies,headers,certificates}
+}
+
 install_vim_plugins()
 {
     vim -E -s -c "source ~/.vimrc" -c PluginInstall -c qa
@@ -41,5 +46,6 @@ case $1 in
     cd ${PROJECT_ROOT} && git submodule update --init
 	symlink_files
     install_vim_plugins
+    make_mutt_cache_dirs
 ;;
 esac
