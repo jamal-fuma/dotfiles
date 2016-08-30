@@ -2,3 +2,6 @@
 
 bindfs -n -r -p 0700 -o nonempty \
 		/media/ubuntu/ssh-keys ~/.ssh
+
+bindfs -n -r -p 0700 -o nonempty \
+        /media/ubuntu/ssh-keys/gitpass ~/.gitpass
