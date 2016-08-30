@@ -1,0 +1,33 @@
+# (1) IMAP/SMTP account settings for gmail with google apps domain of stink.tv
+source ~/dotfiles/mutt/hooks/accounts/default.rc
+account-hook imaps://imap.gmail.com \
+     'set realname	    = "Jamal Natour" ;\
+      set signature	    = "~/dotfiles/mutt/signature-hotmail.txt" ;\
+      set my_username   = "pebbleit@stink.tv" ;\
+      set imap_user	    = "$my_username" ;\
+      set smtp_url	    = "smtp://$imap_user@smtp.gmail.com:587" ;\
+      set smtp_pass	    = "$imap_pass" ;\
+'
+
+# (2) IMAP folder layout for hotmail.com
+source ~/dotfiles/mutt/hooks/folders/default.rc
+set hostname    = "stink.tv"
+set folder      = "imaps://imap.gmail.com"
+
+set spoolfile   = "+INBOX"
+set postponed   = "+[GMail]/Drafts"
+set trash       = "+[GMail]/Bin"
+unset record
+
+# (3) Default mailboxes
+#mailboxes = "$spoolfile $record $postponed $trash"
+
+# (4) Addition headers for outgoing messages from hotmail.com
+my_hdr From: $realname <$imap_user>
+
+macro index gi "<change-folder>$spoolfile<enter>" "Go to all mail"
+macro index gs "<change-folder>+[GMail]/Sent Mail<enter>" " Go to sent mail"
+macro index gd "<change-folder>$postponed<enter>" " Go to drafts mail"
+
+# (5) Show To rather than From in sent Messages
+source ~/dotfiles/mutt/hooks/folders/record.rc
