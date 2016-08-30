@@ -1,0 +1,24 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = github:jamal-fuma/dotfiles.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[submodule "bundle/vundle"]
+	url = https://github.com/gmarik/vundle.git
+[branch "develop"]
+	remote = origin
+    merge = refs/heads/master
+
+[filter "openssl"]
+        smudge = ~/dotfiles/gitencrypt/smudge_filter_openssl
+        clean  = ~/dotfiles/gitencrypt/clean_filter_openssl
+[diff "openssl"]
+        textconv = ~/dotfiles/gitencrypt/diff_filter_openssl
