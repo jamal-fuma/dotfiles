@@ -27,6 +27,7 @@ symlink_files()
 ${PROJECT_ROOT}/bash/aliases	    ${HOME}/.bash_aliases
 ${PROJECT_ROOT}/vim/vimrc	        ${HOME}/.vimrc
 ${PROJECT_ROOT}/git/gitconfig	    ${HOME}/.gitconfig
+${PROJECT_ROOT}/mutt/muttrc	        ${HOME}/.muttrc
 EOS
 }
 
