@@ -22,9 +22,12 @@ symlink_files()
 {
 	while read from to;
 	do
-		ln -sv ${from} ${to}
+        [ -f $to ] || \
+            ln -sv ${from} ${to}
 	done <<EOS
 ${PROJECT_ROOT}/bash/aliases	    ${HOME}/.bash_aliases
+${PROJECT_ROOT}/bash/bashrc	        ${HOME}/.bashrc
+${PROJECT_ROOT}/bash/profile	    ${HOME}/.profile
 ${PROJECT_ROOT}/vim/vimrc	        ${HOME}/.vimrc
 ${PROJECT_ROOT}/git/gitconfig	    ${HOME}/.gitconfig
 ${PROJECT_ROOT}/mutt/muttrc	        ${HOME}/.muttrc
