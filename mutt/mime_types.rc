@@ -1,5 +1,5 @@
 # (1) declare mime types
-set mailcap_path = ~/.mutt/mailcap.rc
+set mailcap_path = ~/dotfiles/mutt/mailcap.rc
 
 set mime_forward = ask-yes
 # (2) use mailcap to invoke a view for the following mime types

@@ -28,7 +28,7 @@ folder-hook imaps://mail.fumasoftware.co.uk 'source ~/dotfiles/mutt/hooks/accoun
 
 macro index gf '<sync-mailbox><enter-command>source ~/dotfiles/mutt/hooks/accounts/fumasoftware-co-uk.rc<enter><change-folder>!<enter>'
 macro index gh '<sync-mailbox><enter-command>source ~/dotfiles/mutt/hooks/accounts/hotmail-com.rc<enter><change-folder>!<enter>'
-#macro index gp '<sync-mailbox><enter-command>source ~/dotfiles/mutt/hooks/accounts/pebbleit-stink-tv.rc<enter><change-folder>!<enter>'
+macro index gp '<sync-mailbox><enter-command>source ~/dotfiles/mutt/hooks/accounts/pebbleit-stink-tv.rc<enter><change-folder>!<enter>'
 
 bind pager h display-toggle-weed        #toggle headers with h key
 
