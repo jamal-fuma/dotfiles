@@ -40,6 +40,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-fugitive.git'
 
+" close xml tags
+Plugin 'alvan/vim-closetag'
+
 " trigger automated install of plugins
 if vundle_plugins_installed == 0
     :PluginInstall
