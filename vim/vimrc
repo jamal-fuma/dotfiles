@@ -51,6 +51,12 @@ Bundle 'https://github.com/vim-scripts/groovy.vim.git'
 "Plugin 'pearofducks/ansible-vim'
 Bundle 'chase/vim-ansible-yaml'
 
+" tagview
+Bundle 'https://github.com/majutsushi/tagbar.git'
+
+" cscope maps
+Bundle 'https://github.com/steffanc/cscopemaps.vim.git'
+
 " trigger automated install of plugins
 if vundle_plugins_installed == 0
     :PluginInstall
