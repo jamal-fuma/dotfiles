@@ -91,3 +91,13 @@ au BufReadPost Jenkinsfile set syntax=groovy
 
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml"
 
+" setup tagbar
+let g:tagbar_width = 120
+let g:tagbar_left  = 1
+
+" make the quickfix window open in a new tab with local mapping
+autocmd FileType qf nnoremap <buffer> <Enter> <C-W><Enter><C-W>T
+
+nmap <leader>jj :make -j8 check<CR>
+nmap <silent> <Right> :next<CR>
+nmap <silent> <Left> :prev<CR>
