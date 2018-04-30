@@ -1,12 +1,13 @@
-text/html; elinks -dump -dump-charset utf8 -force-html %s; copiousoutput; needsterminal; nametemplate=%s.html
-#application/pdf; xpdf %s; copiousoutput; needsterminal; nametemplate=%s.pdf
-application/pdf; pdftotext -layout %s - ; copiousoutput
-image/*; firefox %s; copiousoutput; nametemplate=%s.jpg
+text/html;                                                                      elinks -dump -dump-charset utf8 -force-html %s; copiousoutput; needsterminal; nametemplate=%s.html
+#application/pdf;                                                               xpdf %s; copiousoutput; needsterminal; nametemplate=%s.pdf
+application/pdf;                                                                pdftotext -layout %s - ; copiousoutput
+image/*;                                                                        firefox %s; copiousoutput; nametemplate=%s.jpg
 
-text/rtf; xdg-open %s; copiousoutput; nametemplate=%s.rtf
-application/ms-rtf; xdg-open %s; copiousoutput; nametemplate=%s.rtf
+text/rtf;                                                                       xdg-open %s; copiousoutput; nametemplate=%s.rtf
+application/ms-rtf;                                                             xdg-open %s; copiousoutput; nametemplate=%s.rtf
 
-text/calendar; ~/bin/icalview %s; copiousoutput; nametemplate=%s.ics
-application/vnd.oasis.xdg-opendocument.text; xdg-open %s; copiousoutput; nametemplate=%s.odt
-application/vnd.xdg-openxmlformats-officedocument.wordprocessingml.document; xdg-open '%s'; copiousoutput; nametemplate='%s'.docx
-application/msword; xdg-open '%s'; copiousoutput; nametemplate='%s'.doc
+text/calendar;                                                                  ~/bin/icalview %s; copiousoutput; nametemplate=%s.ics
+application/vnd.oasis.xdg-opendocument.text;                                    xdg-open %s; copiousoutput; nametemplate=%s.odt
+application/vnd.xdg-openxmlformats-officedocument.wordprocessingml.document;    xdg-open %s; copiousoutput; nametemplate=%s.docx
+application/vnd.openxmlformats-officedocument.wordprocessingml.document;        ~/dotfiles/scripts/doc-to-pdftext.sh %s ; copiousoutput; nametemplate=%s.docx
+application/msword;                                                             xdg-open %s; copiousoutput; nametemplate=%s.doc
