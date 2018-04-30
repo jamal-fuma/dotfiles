@@ -24,11 +24,12 @@ folder-hook imaps://mail.fumasoftware.co.uk 'source ~/dotfiles/mutt/hooks/accoun
 
 # Gmail
 #folder-hook imaps://imap.gmail.com 'source ~/dotfiles/mutt/hooks/accounts/pebbleit-stink-tv.rc'
-#folder-hook imaps://imap.gmail.com 'source ~/dotfiles/mutt/hooks/accounts/gmail.rc'
+folder-hook imaps://imap.gmail.com 'source ~/dotfiles/mutt/hooks/accounts/gmail.rc'
+
 bind index g noop
 macro index gf '<sync-mailbox><enter-command>source ~/dotfiles/mutt/hooks/accounts/fumasoftware-co-uk.rc<enter><change-folder>!<enter>'
 macro index gh '<sync-mailbox><enter-command>source ~/dotfiles/mutt/hooks/accounts/hotmail-com.rc<enter><change-folder>!<enter>'
-macro index gp '<sync-mailbox><enter-command>source ~/dotfiles/mutt/hooks/accounts/pebbleit-stink-tv.rc<enter><change-folder>!<enter>'
+macro index gp '<sync-mailbox><enter-command>source ~/dotfiles/mutt/hooks/accounts/gmail.rc<enter><change-folder>!<enter>'
 
 bind pager h display-toggle-weed        #toggle headers with h key
 
