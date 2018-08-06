@@ -32,6 +32,7 @@ ${PROJECT_ROOT}/vim/vimrc	        ${HOME}/.vimrc
 ${PROJECT_ROOT}/git/gitconfig	    ${HOME}/.gitconfig
 ${PROJECT_ROOT}/mutt/muttrc	        ${HOME}/.muttrc
 ${PROJECT_ROOT}/screen/screenrc	    ${HOME}/.screenrc
+${PROJECT_ROOT}/readline/inputrc	${HOME}/.inputrc
 EOS
 }
 
