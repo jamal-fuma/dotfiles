@@ -1,0 +1,3 @@
+I confirm $NAME have exclusive
+right of representation for the role of $TITLE with $CLIENT
+at a per diem of $RATE.
