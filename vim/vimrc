@@ -98,6 +98,12 @@ let g:tagbar_left  = 1
 " make the quickfix window open in a new tab with local mapping
 autocmd FileType qf nnoremap <buffer> <Enter> <C-W><Enter><C-W>T
 
+"magic things happen when i type this stuf
+"ab = abreviation keyword
+"%:t is tail
+"%:r is root
+ab xclass <C-R>=expand('%:t:r')<CR>
+
 nmap <leader>jj :make -j8 check<CR>
 nmap <silent> <Right> :next<CR>
 nmap <silent> <Left> :prev<CR>

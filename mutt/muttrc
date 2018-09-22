@@ -33,5 +33,7 @@ macro index gp '<sync-mailbox><enter-command>source ~/dotfiles/mutt/hooks/accoun
 
 bind pager h display-toggle-weed        #toggle headers with h key
 
+macro index,pager \\u "<enter-command>set pipe_decode = yes<enter><pipe-message>urlview<enter><enter-command>set pipe_decode = no<enter>" "view URLs"
+
 # default to fuma account
 source ~/dotfiles/mutt/hooks/accounts/fumasoftware-co-uk.rc

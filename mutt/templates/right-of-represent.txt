@@ -1,3 +1,9 @@
+[Right of Representation]
 I confirm $NAME have exclusive
 right of representation for the role of $TITLE with $CLIENT
 at a per diem of $RATE.
+
+[GDPR Consent]
+I confirm $NAME have consent to retain my information for the
+purposes of processing said information for the
+purposes of providing the services of an employment business.
