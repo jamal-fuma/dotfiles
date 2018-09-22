@@ -1,0 +1,8 @@
+This is my github in general https://github.com/jamal-fuma
+
+The specific build system project was originally here https://github.com/jamal-fuma/autoscaffold
+Over time, it birthed https://github.com/jamal-fuma/fuma_build_scripts
+and https://github.com/jamal-fuma/fuma_build_aux and https://github.com/jamal-fuma/fuma_m4
+
+This is used in projects like
+https://github.com/jamal-fuma/rapidxml-wrapper as git-submodules
