@@ -5,7 +5,7 @@ source ~/dotfiles/mutt/contacts/people.rc       # load the personal
 source ~/dotfiles/mutt/contacts/prevox.rc       # load the prevox contacts
 source ~/dotfiles/mutt/contacts/stink-co.rc     # load the stink contacts
 source ~/dotfiles/mutt/contacts/station-road.rc # load the stink contacts
-source ~/dotfiles/mutt/contacts/pimps.rc # load the pimp contacts
+source ~/dotfiles/mutt/contacts/agents.rc # load the agents contacts
 
 # Replace addresses with names if their address is in the addressbook
 set sort_alias		= alias # sort the contact lists
