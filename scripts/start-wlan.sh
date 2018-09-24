@@ -85,7 +85,13 @@ do_bring_wifi_up(){
     generate_dns_resolver_configuration
 
     # generate the minimal configuration needed from wpa_passphrase
-    generate_wpa_supplicant_configuration;
+    local essid=${1:-''}
+    if [ "x$essid" = "x" ]; then
+        ( exec 2>&1 ${APP_NAME} help );
+        exit `false`;
+    fi
+
+    generate_wpa_supplicant_configuration "${essid}";
 
     # connect to wifi in background
     wpa_supplicant \
