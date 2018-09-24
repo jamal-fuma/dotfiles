@@ -121,6 +121,10 @@ main(){
         down)
             do_bring_wifi_down
             ;;
+        help*)
+            printf "%s: up <essid>\n" "${APP_NAME}"
+            printf "\t%s\n" "start wpa_supplicant connection to Wifi Ap";
+            ;;
         *)
             printf "%s: '%s'\n" "${APP_NAME}" " takes either 'up' or 'down' as argument";
             exit `false`;
