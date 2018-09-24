@@ -21,7 +21,6 @@ export PROJECT_ROOT=${SCRIPTPATH}
 APP_NAME="${PROJECT_ROOT}/$(basename $0)"
 WPA_SUPPLICANT_CNF=$(pwd)/wpa_supplicant.conf
 IFACE=wlan0
-ESSID=htc
 # resolve dns with google
 NS1="8.8.8.8"
 NS2="8.8.4.4"
@@ -62,7 +61,8 @@ systemctl_start(){
 
 # generate the minimal configuration needed from wpa_passphrase
 generate_wpa_supplicant_configuration(){
-    wpa_passphrase ${ESSID} > ${WPA_SUPPLICANT_CNF}
+    local essid=${1:-'missing\ essid\ in\ generate_wpa_supplicant_configuration'}
+    wpa_passphrase ${essid} > ${WPA_SUPPLICANT_CNF}
     chmod_path 600 ${WPA_SUPPLICANT_CNF}
     chown_path "${UID}:${GID}" "${WPA_SUPPLICANT_CNF}"
 }
