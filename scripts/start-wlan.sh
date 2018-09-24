@@ -1,6 +1,24 @@
 #!/bin/sh
 
-APP_NAME=$(pwd)/$(basename $0)
+# workout the absolute path to the checkout directory
+abspath()
+{
+    case "${1}" in
+        [./]*)
+            local ABSPATH="$(cd ${1%/*}; pwd)/${1##*/}"
+            echo "${ABSPATH}"
+            ;;
+        *)
+            echo "${PWD}/${1}"
+            ;;
+    esac
+}
+
+SCRIPT=$(abspath ${0})
+SCRIPTPATH=`dirname ${SCRIPT}`
+export PROJECT_ROOT=${SCRIPTPATH}
+
+APP_NAME="${PROJECT_ROOT}/$(basename $0)"
 WPA_SUPPLICANT_CNF=$(pwd)/wpa_supplicant.conf
 IFACE=wlan0
 ESSID=htc
