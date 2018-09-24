@@ -1,5 +1,4 @@
 #!/bin/sh
-set -x
 
 APP_NAME=$(pwd)/$(basename $0)
 WPA_SUPPLICANT_CNF=$(pwd)/wpa_supplicant.conf
