@@ -126,7 +126,7 @@ main(){
             printf "\t%s\n" "start wpa_supplicant connection to Wifi Ap";
             ;;
         *)
-            printf "%s: '%s'\n" "${APP_NAME}" " takes either 'up' or 'down' as argument";
+            printf "%s: '%s'\n" "${APP_NAME}" " takes either 'up' or 'down' or 'help' as argument";
             exit `false`;
             ;;
     esac
