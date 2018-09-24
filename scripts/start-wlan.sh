@@ -115,7 +115,8 @@ do_bring_wifi_down(){
 main(){
     case $1 in
         up)
-            do_bring_wifi_up
+            local essid="${2}"
+            do_bring_wifi_up "${essid}"
             ;;
         down)
             do_bring_wifi_down
