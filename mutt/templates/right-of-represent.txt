@@ -1,9 +1,15 @@
+NAME='Jefferson Frank';
+TITLE='Consultant';
+CLIENT='EE St Pauls';
+RATE=500gpb
+cat <<EOF
 [Right of Representation]
-I confirm $NAME have exclusive
-right of representation for the role of $TITLE with $CLIENT
-at a per diem of $RATE.
+I confirm '$NAME' have exclusive
+right of representation for the role of '$TITLE' with '$CLIENT'
+at a per diem of '$RATE'.
 
 [GDPR Consent]
-I confirm $NAME have consent to retain my information for the
+I confirm '$NAME' have consent to retain my information for the
 purposes of processing said information for the
-purposes of providing the services of an employment business.
+purposes of providing the services of an employment business."
+EOF
