@@ -7,3 +7,5 @@ ll = log --abbrev-commit --graph --pretty='format:%C(yellow)%h%Cblue%d%Creset %s
 
 [push]
 default = simple
+[diff "pdf"]
+	textconv = pdftostdout

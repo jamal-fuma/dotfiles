@@ -25,6 +25,7 @@ symlink_files()
         [ -f $to ] || \
             ln -sv ${from} ${to}
 	done <<EOS
+${PROJECT_ROOT}/scripts/pdftostdout	${HOME}/bin/pdftostdout
 ${PROJECT_ROOT}/bash/aliases	    ${HOME}/.bash_aliases
 ${PROJECT_ROOT}/bash/bashrc	        ${HOME}/.bashrc
 ${PROJECT_ROOT}/bash/profile	    ${HOME}/.profile
@@ -33,18 +34,28 @@ ${PROJECT_ROOT}/git/gitconfig	    ${HOME}/.gitconfig
 ${PROJECT_ROOT}/mutt/muttrc	        ${HOME}/.muttrc
 ${PROJECT_ROOT}/screen/screenrc	    ${HOME}/.screenrc
 ${PROJECT_ROOT}/readline/inputrc	${HOME}/.inputrc
+${PROJECT_ROOT}/git/attributes	    ${HOME}/.config/git/attributes
 EOS
 }
 
-make_mutt_cache_dirs()
+make_dirs()
 {
-    mkdir -p ~/.mutt-cache/{bodies,headers,certificates}
+	while read dname;
+	do
+        ( cd ${dname} || mkdir -p ${dname} );
+	done <<EOS
+${HOME}/bin
+${HOME}/.config/git
+${HOME}/.mutt-cache/bodies
+${HOME}/.mutt-cache/headers
+${HOME}/.mutt-cache/certificates
+EOS
 }
 
 case $1 in
 *)
     cd ${PROJECT_ROOT} && git submodule update --init
+    make_dirs
 	symlink_files
-    make_mutt_cache_dirs
 ;;
 esac
