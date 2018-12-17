@@ -34,6 +34,7 @@ ${PROJECT_ROOT}/git/gitconfig	    ${HOME}/.gitconfig
 ${PROJECT_ROOT}/mutt/muttrc	        ${HOME}/.muttrc
 ${PROJECT_ROOT}/screen/screenrc	    ${HOME}/.screenrc
 ${PROJECT_ROOT}/readline/inputrc	${HOME}/.inputrc
+${PROJECT_ROOT}/colordiff/dotcolordiffrc	${HOME}/.colordiffrc
 ${PROJECT_ROOT}/git/attributes	    ${HOME}/.config/git/attributes
 EOS
 }
