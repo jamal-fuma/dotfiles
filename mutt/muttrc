@@ -17,7 +17,8 @@ source ~/dotfiles/mutt/imap.rc
 source ~/dotfiles/mutt/mime_types.rc
 
 # Hotmail
-folder-hook imaps://imap-mail.outlook.com 'source ~/dotfiles/mutt/hooks/accounts/hotmail-com.rc'
+folder-hook 'imaps://uk_coder@imap-mail.outlook.com' 'source ~/dotfiles/mutt/hooks/accounts/hotmail-com.rc'
+folder-hook 'imaps://ct18441@imap-mail.outlook.com' 'source ~/dotfiles/mutt/hooks/accounts/bristol-ac-uk.rc'
 
 # Fumasoftware
 folder-hook imaps://mail.fumasoftware.co.uk 'source ~/dotfiles/mutt/hooks/accounts/fumasoftware-co-uk.rc'
