@@ -4,8 +4,8 @@ set hostname="fumasoftware.com"
 set folder="imaps://mail.fumasoftware.co.uk"
 
 # (1) IMAP/SMTP account settings for fumasoftware.co.uk
-account-hook "$folder" 'source ~/dotfiles/mutt/hooks/accounts/default.rc; \
-                        set realname="Jamal Natour";\
+source ~/dotfiles/mutt/hooks/accounts/default.rc
+account-hook "$folder" 'set realname="Jamal Natour";\
                         set my_username="jamal.natour";\
                         set signature="~/dotfiles/mutt/signature.txt";\
                         set imap_user="$my_username@fumasoftware.com";\

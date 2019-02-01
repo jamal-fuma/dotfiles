@@ -4,8 +4,8 @@ set hostname="outlook.office365.com"
 set folder="imaps://$hostname"
 
 # (1) IMAP/SMTP account settings for imap-mail.outlook.com
-account-hook "$folder" 'source ~/dotfiles/mutt/hooks/accounts/default.rc; \
-                        set realname="Jamal Natour";\
+source ~/dotfiles/mutt/hooks/accounts/default.rc
+account-hook "$folder" 'set realname="Jamal Natour";\
                         set my_username="ct18441";\
                         set signature="~/dotfiles/mutt/signature-imap-mail.outlook.txt";\
                         set imap_user="$my_username@bristol.ac.uk";\
