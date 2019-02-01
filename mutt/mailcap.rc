@@ -1,7 +1,7 @@
 text/html;                                                                      elinks -dump -dump-charset utf8 -force-html %s; copiousoutput; needsterminal; nametemplate=%s.html
 #application/pdf;                                                               xpdf %s; copiousoutput; needsterminal; nametemplate=%s.pdf
 application/pdf;                                                                pdftotext -layout %s - ; copiousoutput
-image/*;                                                                        firefox %s; copiousoutput; nametemplate=%s.jpg
+image/jpeg;                                                                     xdg-open %s; copiousoutput; nametemplate=%s.jpg
 
 text/rtf;                                                                       xdg-open %s; copiousoutput; nametemplate=%s.rtf
 application/ms-rtf;                                                             xdg-open %s; copiousoutput; nametemplate=%s.rtf

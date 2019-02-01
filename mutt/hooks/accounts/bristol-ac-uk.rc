@@ -1,19 +1,17 @@
-# (1) IMAP/SMTP account settings for imap-mail.outlook.com
-source ~/dotfiles/mutt/hooks/accounts/default.rc
-account-hook 'imaps://imap-mail.outlook.com' \
-       'set realname="Jamal Natour" ;\
-        set my_username="ct18441" ;\
-        set imap_pass="`~/dotfiles/scripts/passphrase.sh ct18441`" ;\
-        set signature="~/dotfiles/mutt/signature-imap-mail.outlook.txt" ;\
-        set imap_user="$my_username@bristol.ac.uk" ;\
-        set smtp_url="smtp://$imap_user@smtp-mail.outlook.com:587" ;\
-        set smtp_pass="`~/dotfiles/scripts/passphrase.sh ct18441`" ;'
-
-
 # (2) IMAP folder layout for imap-mail.outlook.com
 source ~/dotfiles/mutt/hooks/folders/default.rc
-set hostname    = "imap-mail.outlook.com"
-set folder      = "imaps://imap-mail.outlook.com"
+set hostname="outlook.office365.com"
+set folder="imaps://$hostname"
+
+# (1) IMAP/SMTP account settings for imap-mail.outlook.com
+account-hook "$folder" 'source ~/dotfiles/mutt/hooks/accounts/default.rc; \
+                        set realname="Jamal Natour";\
+                        set my_username="ct18441";\
+                        set signature="~/dotfiles/mutt/signature-imap-mail.outlook.txt";\
+                        set imap_user="$my_username@bristol.ac.uk";\
+                        set imap_pass="`~/dotfiles/scripts/passphrase.sh ct18441`";\
+                        set smtp_pass="$imap_pass";\
+                        set smtp_url="smtp://$imap_user@smtp.office365.com:587";'
 
 set spoolfile   = "+INBOX"
 set record      = "+Sent"
@@ -22,8 +20,10 @@ set postponed   = "+Drafts"
 # (3) Default mailboxes
 #mailboxes = "$spoolfile $record $postponed"
 
-# (4) Addition headers for outgoing messages from imap-mail.outlook.com
+# (4) Addition headers for outgoing messages from Bristol
 my_hdr From: $realname <$imap_user>
+my_hdr Organization: Smart Internet Lab, Bristol
+my_hdr X-URL: http://www.bristol.ac.uk
 
 macro index gi "<change-folder>$spoolfile<enter>" "Go to all mail"
 macro index gs "<change-folder>$record<enter>" " Go to sent mail"

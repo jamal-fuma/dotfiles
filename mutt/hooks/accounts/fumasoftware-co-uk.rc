@@ -1,24 +1,24 @@
-# (1) IMAP/SMTP account settings for fumasoftware.co.uk
-source ~/dotfiles/mutt/hooks/accounts/default.rc
-account-hook imaps://mail.fumasoftware.co.uk \
-     'set realname	= "Jamal Natour" ;\
-      set my_username	= "jamal.natour" ;\
-      set signature	= "~/dotfiles/mutt/signature.txt" ;\
-      set imap_user	= "$my_username@fumasoftware.com" ;\
-      set smtp_url	= "smtp://$imap_user@mail.fumasoftware.co.uk:587" ;\
-      set smtp_pass	= "$imap_pass"'
-
-# (2) IMAP folder layout for hotmail.com
+# (2) IMAP folder layout for mail.fumasoftware.co.uk
 source ~/dotfiles/mutt/hooks/folders/default.rc
-set hostname	= "fumasoftware.com"
-set folder      = "imaps://mail.fumasoftware.co.uk"
+set hostname="fumasoftware.com"
+set folder="imaps://mail.fumasoftware.co.uk"
 
-set spoolfile   = "+INBOX"
-set record      = "+INBOX/Sent"
-set postponed   = "+INBOX/Drafts"
+# (1) IMAP/SMTP account settings for fumasoftware.co.uk
+account-hook "$folder" 'source ~/dotfiles/mutt/hooks/accounts/default.rc; \
+                        set realname="Jamal Natour";\
+                        set my_username="jamal.natour";\
+                        set signature="~/dotfiles/mutt/signature.txt";\
+                        set imap_user="$my_username@fumasoftware.com";\
+                        \
+                        set smtp_pass="$imap_pass";\
+                        set smtp_url="smtp://$imap_user@mail.fumasoftware.co.uk:587";'
+
+set spoolfile= "+INBOX"
+set record= "+INBOX/Sent"
+set postponed= "+INBOX/Drafts"
 
 # (3) Default mailboxes
-#mailboxes = "$spoolfile $record $postponed"
+#mailboxes= "$spoolfile $record $postponed"
 
 # (4) Additional headers for outgoing messages from Fuma Software
 my_hdr From: $realname <$imap_user>

@@ -1,0 +1,11 @@
+From: Jamal Natour <jamal.natour@fumasoftware.com>
+To: Navision.uk@uk.sogeti.com, accounts.uk@sogeti.com, danny.campbell-wu@sogeti.com, invoices+submitted-sogeti@fumasoftware.com
+
+Subject: Weca-0001 invoice for w/ending 2019-01-013
+
+Hi,
+
+Please find attached invoice and timesheet.
+
+Regards
+Jamal
