@@ -54,6 +54,8 @@ EOS
 }
 
 case $1 in
+mkdir)
+    make_dirs;;
 *)
     cd ${PROJECT_ROOT} && git submodule update --init
     make_dirs
