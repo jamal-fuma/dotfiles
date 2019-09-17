@@ -1,6 +1,6 @@
 [user]
-name = Jamal Natour
-email = Jamal.Natour@fumasoftware.com
+name  = Jackpot
+email = Info@isoftbet.com
 
 [alias]
 ll = log --abbrev-commit --graph --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(white)  %Creset %aN'
