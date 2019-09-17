@@ -31,7 +31,6 @@ ${PROJECT_ROOT}/bash/bashrc	        ${HOME}/.bashrc
 ${PROJECT_ROOT}/bash/profile	    ${HOME}/.profile
 ${PROJECT_ROOT}/vim/vimrc	        ${HOME}/.vimrc
 ${PROJECT_ROOT}/git/gitconfig	    ${HOME}/.gitconfig
-${PROJECT_ROOT}/mutt/muttrc	        ${HOME}/.muttrc
 ${PROJECT_ROOT}/screen/screenrc	    ${HOME}/.screenrc
 ${PROJECT_ROOT}/readline/inputrc	${HOME}/.inputrc
 ${PROJECT_ROOT}/git/attributes	    ${HOME}/.config/git/attributes
