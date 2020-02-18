@@ -48,15 +48,7 @@ fetch_mutt_cert()
 
 make_dirs()
 {
-	while read dname;
-	do
-        mkdir -p ${dname};
-	done <<EOS
-${HOME}/bin
-${HOME}/.config/git
-${HOME}/.mutt-cache/bodies
-${HOME}/.mutt-cache/headers
-EOS
+    mkdir -p "${HOME}/bin" "${HOME}/.config/git" "${HOME}/.mutt-cache/bodies" "${HOME}/.mutt-cache/headers"
 }
 
 case $1 in
