@@ -39,26 +39,36 @@ ${PROJECT_ROOT}/git/attributes	    ${HOME}/.config/git/attributes
 EOS
 }
 
+fetch_mutt_cert()
+{
+    HOST=${1:-"mail.fumasoftware.co.uk:993"}
+    openssl s_client -showcerts -connect "${HOST}" </dev/null 2>/dev/null \
+        | openssl x509 -outform PEM
+}
+
 make_dirs()
 {
 	while read dname;
 	do
-        ( cd ${dname} || mkdir -p ${dname} );
+        mkdir -p ${dname};
 	done <<EOS
 ${HOME}/bin
 ${HOME}/.config/git
 ${HOME}/.mutt-cache/bodies
 ${HOME}/.mutt-cache/headers
-${HOME}/.mutt-cache/certificates
 EOS
 }
 
 case $1 in
+certs)
+    fetch_mutt_cert > ${HOME}/.mutt-cache/certificates
+    ;;
 mkdir)
     make_dirs;;
 *)
     cd ${PROJECT_ROOT} && git submodule update --init
     make_dirs
+    ${PROJECT_ROOT}/install.sh certs
 	symlink_files
 ;;
 esac
