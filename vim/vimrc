@@ -40,6 +40,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-fugitive.git'
 
+" Terraform indent
+Bundle 'https://github.com/hashivim/vim-terraform.git'
+
 " close xml tags
 Plugin 'alvan/vim-closetag'
 
@@ -107,3 +110,9 @@ ab xclass <C-R>=expand('%:t:r')<CR>
 nmap <leader>jj :make -j8 check<CR>
 nmap <silent> <Right> :next<CR>
 nmap <silent> <Left> :prev<CR>
+
+" fold pairs of git commits into one in git rebase
+" :g/^pick/ if getcurpos()[1] % 2 == 0 | s//fixup/ | endif
+
+set list
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
